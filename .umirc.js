@@ -5,7 +5,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  publicPath: 'dist/',
+  publicPath: './dist/',
   runtimePublicPath: true,
   routes: [
     {
