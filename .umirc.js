@@ -1,5 +1,6 @@
 import { defineConfig } from 'umi';
-import HtmlWebpackPlugin from 'html-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
@@ -22,7 +23,14 @@ export default defineConfig({
     '@': '/src',
   },
   outputPath: './',
-  plugins:[
-
-  ]
+  plugins: [],
+  chainWebpack: (memo, { env, webpack, createCSSRule }) => {
+    // 删除 umi 内置插件
+    const html = new HtmlWebpackPlugin({
+      title: 'felix9ia - 找自己',
+      filename: '../index.html',
+      template: './src/template/index.html',
+    });
+    memo.plugins.push(html);
+  },
 });
