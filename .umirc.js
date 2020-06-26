@@ -5,12 +5,12 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  base: '/felix9ia.github.io/',
   publicPath: './dist/',
   runtimePublicPath: true,
   routes: [
     {
       exact: false,
-      base: '/test-gh-pages/',
       path: '/',
       component: '@/layouts/index',
       routes: [
