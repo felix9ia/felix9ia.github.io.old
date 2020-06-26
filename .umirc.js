@@ -5,6 +5,8 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  publicPath: './dist/',
+  runtimePublicPath: true,
   routes: [
     {
       exact: false,
@@ -22,15 +24,19 @@ export default defineConfig({
   alias: {
     '@': '/src',
   },
-  outputPath: './',
   plugins: [],
   chainWebpack: (memo, { env, webpack, createCSSRule }) => {
     // 删除 umi 内置插件
-    const html = new HtmlWebpackPlugin({
-      title: 'felix9ia - 找自己',
-      filename: '../index.html',
-      template: './src/template/index.html',
-    });
-    memo.plugins.push(html);
+    console.log('enveveve', env);
+    if (env === 'production') {
+      const html = [
+        {
+          title: 'felix9ia - 找自己',
+          filename: '../index.html',
+          template: './src/template/index.html',
+        },
+      ];
+      memo.plugin('html').use(HtmlWebpackPlugin, html);
+    }
   },
 });
