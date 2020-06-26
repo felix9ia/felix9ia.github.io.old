@@ -5,11 +5,12 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  base: '/felix9ia.github.io/',
-  publicPath: '/felix9ia.github.io/',
+  publicPath: './dist/',
+  runtimePublicPath: true,
   routes: [
     {
       exact: false,
+      base: '/test-gh-pages/',
       path: '/',
       component: '@/layouts/index',
       routes: [
@@ -23,5 +24,18 @@ export default defineConfig({
   ],
   alias: {
     '@': '/src',
+  },
+  chainWebpack: (memo, { env, webpack, createCSSRule }) => {
+    // 删除 umi 内置插件
+    if (env === 'production') {
+      const html = [
+        {
+          title: 'felix9ia - 找自己',
+          filename: '../index.html',
+          template: './src/template/index.html',
+        },
+      ];
+      memo.plugin('html').use(HtmlWebpackPlugin, html);
+    }
   },
 });

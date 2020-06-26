@@ -33,7 +33,6 @@
   },
   "devDependencies": {
     "html-webpack-plugin": "^4.3.0",
-    "umi-plugin-gh-pages": "^0.2.0",
     "webpack-chain": "^6.4.0"
   }
 }
