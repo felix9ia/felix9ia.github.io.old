@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import { CONFIG } from '@/config';
 import { Button, Row, Col, Card, Layout, Table, Typography } from 'antd';
+import './index.less';
+
+const { Title, Paragraph, Text } = Typography;
 
 class Index extends Component {
   handleIssueClick = issue => {
@@ -8,13 +12,24 @@ class Index extends Component {
       query: {},
     });
   };
+
   render() {
     return (
-      <div id="blog">
-        <div id="main-area" className="card">
-          <Button onClick={this.handleIssueClick}></Button>
+      <div id="main-area">
+        <Title level={3} mark>
+          {CONFIG.owner}
+        </Title>
+        <div>
+          <Button type="text" onClick={this.handleIssueClick}>
+            我的博客
+          </Button>
+          <Button type="text" href="#">
+            我的简历
+          </Button>
+          <Button type="text" href="https://space.bilibili.com/130832968">
+            我的 BiliBili
+          </Button>
         </div>
-        <div className="card">catalog</div>
       </div>
     );
   }

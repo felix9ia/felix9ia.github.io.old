@@ -17,7 +17,9 @@ export default function({ children, location, route, history, match }) {
           </Breadcrumb.Item>
         </Breadcrumb>
       </Header>
-      <Content style={{ minHeight: '1000px' }}>{children}</Content>
+      <Content style={{ minHeight: '1000px', margin: '0 auto' }}>
+        {children}
+      </Content>
     </Layout>
   );
 }

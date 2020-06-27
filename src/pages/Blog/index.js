@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { Button, Row, Col, Card, Layout, Table, Typography } from 'antd';
+import {
+  Button,
+  Row,
+  Col,
+  Card,
+  Layout,
+  Table,
+  Typography,
+  Skeleton,
+} from 'antd';
 import './index.less';
 import { getLabels, getIssuesByLabel } from '@/services/github';
 
@@ -11,15 +20,18 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isLoading: false,
       labels: [],
       issues: [],
       selectedLabelName: null,
     };
   }
 
-  componentWillMount() {
-    this.getLabels();
-    this.getIssuesByLabel();
+  async componentWillMount() {
+    this.setState({ isLoading: true });
+    await this.getLabels();
+    await this.getIssuesByLabel();
+    this.setState({ isLoading: false });
   }
 
   getIssuesByLabel = async labelName => {
@@ -48,8 +60,32 @@ class Home extends Component {
     });
   };
 
+  handleTabChange = (key, type) => {
+    console.log(key, type);
+    this.setState({ [type]: key });
+  };
+
+  renderWithSkeleton = content => {
+    return <div>{this.state.isLoading ? <Skeleton active /> : content}</div>;
+  };
+
   renderLabelList = () => {
     const { state } = this;
+    const tabList = [
+      {
+        key: 'tab1',
+        tab: '所有',
+      },
+      {
+        key: 'tab2',
+        tab: '时间线',
+      },
+      {
+        key: 'tab3',
+        tab: '归档',
+      },
+    ];
+
     const columns = [
       {
         dataIndex: 'name',
@@ -61,15 +97,24 @@ class Home extends Component {
         ),
       },
     ];
+    const content = (
+      <Table
+        pagination={{ pageSize: 20, hideOnSinglePage: true }}
+        showHeader={false}
+        rowKey="id"
+        dataSource={state.labels}
+        columns={columns}
+      />
+    );
     return (
-      <Card title="Label 分类" bordered={false}>
-        <Table
-          pagination={{ pageSize: 20, hideOnSinglePage: true }}
-          showHeader={false}
-          rowKey="id"
-          dataSource={state.labels}
-          columns={columns}
-        />
+      <Card
+        bordered={false}
+        tabList={tabList}
+        onTabChange={key => {
+          this.handleTabChange(key, 'key');
+        }}
+      >
+        {this.renderWithSkeleton(content)}
       </Card>
     );
   };
@@ -90,15 +135,18 @@ class Home extends Component {
         ),
       },
     ];
+    const content = (
+      <Table
+        pagination={{ pageSize: 20, hideOnSinglePage: true }}
+        showHeader={false}
+        rowKey="id"
+        dataSource={state.issues}
+        columns={columns}
+      />
+    );
     return (
-      <Card bordered={false}>
-        <Table
-          pagination={{ pageSize: 20, hideOnSinglePage: true }}
-          showHeader={false}
-          rowKey="id"
-          dataSource={state.issues}
-          columns={columns}
-        />
+      <Card bordered={false} title="所有文章">
+        {this.renderWithSkeleton(content)}
       </Card>
     );
   };
