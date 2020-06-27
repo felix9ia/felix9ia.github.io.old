@@ -101,7 +101,7 @@ class Home extends Component {
       <Table
         pagination={{ pageSize: 20, hideOnSinglePage: true }}
         showHeader={false}
-        rowKey="id"
+        rowKey={(record, index) => index}
         dataSource={state.labels}
         columns={columns}
       />
@@ -139,7 +139,7 @@ class Home extends Component {
       <Table
         pagination={{ pageSize: 20, hideOnSinglePage: true }}
         showHeader={false}
-        rowKey="id"
+        rowKey={(record, index) => index}
         dataSource={state.issues}
         columns={columns}
       />

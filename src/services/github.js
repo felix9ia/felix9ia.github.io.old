@@ -15,7 +15,6 @@ export async function getLabels() {
 
 export async function getIssueDetailByNumber(id) {
   const issueUrlWithId = `${issue_url}/${id}`;
-  console.log('ss');
   return await request.get(issueUrlWithId, {
     params: {},
   });

@@ -4,8 +4,7 @@
 
 # felix9ia's blog
 
-这是一个基于  ``Github page`` 和 ``github api`` 中的 `issues` 接口 搭建的单页面静态博客，点击[「这里」](http://felix9ia
-.github.io)查看博客。
+这是一个基于  ``Github page`` 和 ``github api`` 中的 `issues` 接口 搭建的单页面静态博客，点击[「这里」](http://felix9ia.github.io)查看博客。
 
 ## 缘起
 
@@ -18,7 +17,8 @@
 参考大家的成熟方案
 
 ### 开发工程参考
-而这个项目最原始是 fork 自 [cobish/cobish.github.io](https://github.com/cobish/cobish.github.io)
+而这个项目最原始是 fork 自 [cobish/cobish.github.io](https://github.com/cobish/cobish.github.io)，但是由于项目框架有些老旧，无法支持 antd
+， 所以我按照原有的思路重新进行了搭建
 
 ### 路由参考
 所有的路由习惯都是参照了 [阮一峰的个人网站](http://www.ruanyifeng.com/)
@@ -71,3 +71,8 @@ $ npm run build
 - Firefox
 - Safari
 - IE10+
+
+## TODO
+[] 防止页面缓存 js 和 css
+[] 文章目录
+[] 文章书写 [editor](https://github.com/rexxars/react-markdown/blob/master/demo/src/demo.js)
