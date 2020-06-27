@@ -28,12 +28,10 @@ export default defineConfig({
   },
   chainWebpack: (memo, e) => {
     const { env, webpack, createCSSRule } = e;
-    console.log('memo============', memo);
-    // 删除 umi 内置插件
     if (env === 'production') {
       const html = [
         {
-          title: 'felix9ia - 找自己',
+          title: 'felix9ia - 我怕自己忘了',
           filename: '../index.html',
           template: './src/template/index.html',
         },
