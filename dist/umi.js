@@ -49,7 +49,7 @@
     (n.o = function(e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (n.p = './dist/'),
+    (n.p = '/dist/'),
     n((n.s = 0));
 })({
   '++zV': function(e, t, n) {
@@ -1123,7 +1123,7 @@
     t.default = l;
   },
   0: function(e, t, n) {
-    n('jomj'), (e.exports = n('tB8F'));
+    e.exports = n('tB8F');
   },
   '03A+': function(e, t, n) {
     var r = n('JTzB'),
@@ -23170,14 +23170,14 @@
     });
     n('k1fw');
     var r = n('YS25'),
-      o = { basename: '/felix9ia.github.io/' };
+      o = { basename: '/' };
     window.routerBase && (o.basename = window.routerBase);
     var i = Object({ NODE_ENV: 'production' }).__IS_SERVER
         ? null
-        : Object(r['a'])(o),
+        : Object(r['b'])(o),
       a = function() {
         var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return e || (i = Object(r['a'])(o)), i;
+        return e || (i = Object(r['b'])(o)), i;
       };
   },
   FgkJ: function(e, t) {
@@ -29638,23 +29638,31 @@
   'STA+': function(e, t, n) {
     'use strict';
     n.r(t);
-    var r = n('q1tI'),
-      o = n.n(r);
-    class i extends r['Component'] {
+    n('+L6B');
+    var r = n('2/Rp'),
+      o = n('q1tI'),
+      i = n.n(o);
+    class a extends o['Component'] {
+      constructor() {
+        super(...arguments),
+          (this.handleIssueClick = e => {
+            this.props.history.push({ pathname: '/blog', query: {} });
+          });
+      }
       render() {
-        return o.a.createElement(
+        return i.a.createElement(
           'div',
           { id: 'blog' },
-          o.a.createElement(
+          i.a.createElement(
             'div',
             { id: 'main-area', className: 'card' },
-            'main',
+            i.a.createElement(r['a'], { onClick: this.handleIssueClick }),
           ),
-          o.a.createElement('div', { className: 'card' }, 'catalog'),
+          i.a.createElement('div', { className: 'card' }, 'catalog'),
         );
       }
     }
-    t['default'] = i;
+    t['default'] = a;
   },
   STAE: function(e, t, n) {
     var r = n('0Dky');
@@ -44107,10 +44115,6 @@
             (Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]));
         return n;
       });
-  },
-  jomj: function(e, t, n) {
-    'use strict';
-    n.p = window.publicPath;
   },
   'k+1r': function(e, t, n) {
     var r = n('QkVE');
