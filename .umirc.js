@@ -1,10 +1,11 @@
 import { defineConfig } from 'umi';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-
+import Config from 'webpack-chain';
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  history: { type: 'hash' },
   base: '/felix9ia.github.io/',
   publicPath: './dist/',
   runtimePublicPath: true,
@@ -25,7 +26,9 @@ export default defineConfig({
   alias: {
     '@': '/src',
   },
-  chainWebpack: (memo, { env, webpack, createCSSRule }) => {
+  chainWebpack: (memo, e) => {
+    const { env, webpack, createCSSRule } = e;
+    console.log('memo============', memo);
     // 删除 umi 内置插件
     if (env === 'production') {
       const html = [

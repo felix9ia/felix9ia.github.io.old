@@ -23170,7 +23170,7 @@
     });
     n('k1fw');
     var r = n('YS25'),
-      o = { basename: '/' };
+      o = { basename: '/felix9ia.github.io/' };
     window.routerBase && (o.basename = window.routerBase);
     var i = Object({ NODE_ENV: 'production' }).__IS_SERVER
         ? null
@@ -49045,7 +49045,6 @@
       c = [
         {
           exact: !1,
-          base: '/test-gh-pages/',
           path: '/',
           component: n('aArQ').default,
           routes: [
