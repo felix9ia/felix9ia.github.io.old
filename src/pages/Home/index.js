@@ -16,7 +16,7 @@ class Index extends Component {
   render() {
     return (
       <div id="main-area">
-        <Title level={3} mark>
+        <Title level={2} mark>
           {CONFIG.owner}
         </Title>
         <div>
