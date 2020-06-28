@@ -11,11 +11,11 @@ export default function({ children, location, route, history, match }) {
         className=""
         style={{ backgroundColor: '#fff', marginBottom: '10px' }}
       >
-        {/*<Breadcrumb style={{ lineHeight: '64px' }}>*/}
-        {/*  <Breadcrumb.Item>*/}
-        {/*    <a href="/">felix9ia</a>*/}
-        {/*  </Breadcrumb.Item>*/}
-        {/*</Breadcrumb>*/}
+        <Breadcrumb style={{ lineHeight: '64px' }}>
+          <Breadcrumb.Item>
+            <a href="/">felix9ia</a>
+          </Breadcrumb.Item>
+        </Breadcrumb>
       </Header>
       <Content
         style={{

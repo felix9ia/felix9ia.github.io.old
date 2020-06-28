@@ -62,6 +62,7 @@ $ npm run build
 ## 关于高亮
 
 [how to add custom style to codes](https://github.com/rexxars/react-markdown/issues/354)
+[Using highlight.js with React.js](https://github.com/highlightjs/highlight.js/issues/925)
 
 ## 技术栈
 

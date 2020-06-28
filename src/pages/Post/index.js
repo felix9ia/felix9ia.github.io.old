@@ -5,11 +5,8 @@ import CodeBlock from '@/components/CodeRenderer';
 import linkRenderer from '@/components/LinkRenderer';
 
 import { CONFIG } from '@/config';
-import marked from 'marked';
 import toc from 'remark-toc';
 import ReactMarkdown from 'react-markdown/with-html';
-import hljs from 'highlight.js';
-
 import { getIssueDetailByNumber } from '@/services/github';
 import {
   Typography,
@@ -20,16 +17,9 @@ import {
   Skeleton,
   Button,
 } from 'antd';
-// import './index.less';
+import './index.less';
 
 const { Title } = Typography;
-
-// 代码高亮
-marked.setOptions({
-  highlight: code => {
-    return hljs.highlightAuto(code).value;
-  },
-});
 
 class Post extends Component {
   constructor(props) {
@@ -107,7 +97,7 @@ class Post extends Component {
           title={this.state.issueTitle}
           subTitle={this.renderTags()}
         />
-        <Card style={{ width: '700px' }}>
+        <Card className="content-card">
           {this.renderWithSkeleton(content)}
           <Button block onClick={this.handleClick}>
             点击评论
