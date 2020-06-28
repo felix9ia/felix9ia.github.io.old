@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import CodeBlock from '@/components/CodeBlock';
+
+import CodeBlock from '@/components/CodeRenderer';
+import linkRenderer from '@/components/LinkRenderer';
+
 import { CONFIG } from '@/config';
 import marked from 'marked';
 import toc from 'remark-toc';
@@ -97,7 +100,8 @@ class Post extends Component {
         escapeHtml={false}
         source={this.state.detail}
         renderers={{
-          code: CodeBlock,
+          Link: linkRenderer,
+          CodeBlock: CodeBlock,
         }}
         plugins={[toc]}
       />
