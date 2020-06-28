@@ -26061,9 +26061,8 @@
           (this.renderLabelList = () => {
             var e = this.state,
               t = [
-                { key: 'tab1', tab: '\u6240\u6709' },
+                { key: 'tab1', tab: '\u6240\u6709\u5206\u7c7b' },
                 { key: 'tab2', tab: '\u65f6\u95f4\u7ebf' },
-                { key: 'tab3', tab: '\u5f52\u6863' },
               ],
               n = [
                 {
@@ -26123,7 +26122,7 @@
               });
             return l.a.createElement(
               o['a'],
-              { bordered: !1, title: '\u6240\u6709\u6587\u7ae0' },
+              { bordered: !1, title: '\u76f8\u5173\u6587\u7ae0' },
               this.renderWithSkeleton(n),
             );
           }),

@@ -23,6 +23,7 @@ export default defineConfig({
       ],
     },
   ],
+  hash: true,
   alias: {
     '@': '/src',
   },

@@ -74,15 +74,11 @@ class Home extends Component {
     const tabList = [
       {
         key: 'tab1',
-        tab: '所有',
+        tab: '所有分类',
       },
       {
         key: 'tab2',
         tab: '时间线',
-      },
-      {
-        key: 'tab3',
-        tab: '归档',
       },
     ];
 
@@ -145,7 +141,7 @@ class Home extends Component {
       />
     );
     return (
-      <Card bordered={false} title="所有文章">
+      <Card bordered={false} title="相关文章">
         {this.renderWithSkeleton(content)}
       </Card>
     );

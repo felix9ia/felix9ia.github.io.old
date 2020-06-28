@@ -73,6 +73,5 @@ $ npm run build
 - IE10+
 
 ## TODO
-[] 防止页面缓存 js 和 css
 [] 文章目录
 [] 文章书写 [editor](https://github.com/rexxars/react-markdown/blob/master/demo/src/demo.js)
