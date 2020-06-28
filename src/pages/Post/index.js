@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import CodeBlock from '@/components/CodeRenderer';
+// https://github.com/rexxars/react-markdown-examples
 import linkRenderer from '@/components/LinkRenderer';
 
 import { CONFIG } from '@/config';
@@ -19,7 +20,7 @@ import {
   Skeleton,
   Button,
 } from 'antd';
-import './index.less';
+// import './index.less';
 
 const { Title } = Typography;
 
@@ -82,26 +83,15 @@ class Post extends Component {
   };
 
   render() {
-    // const content =
-    //   <ReactMarkdown
-    //     //必须是false不然img标签渲染不出来
-    //     escapeHtml={false}
-    //     source={this.state.detail}
-    //     renderers={{
-    //       code: CodeBlock
-    //     }}
-    //     plugins={[toc]}
-    //   />;
-
     const content = (
       <ReactMarkdown
         //必须是false不然img标签渲染不出来
-        className="result"
+        // className="result"
         escapeHtml={false}
         source={this.state.detail}
         renderers={{
           Link: linkRenderer,
-          CodeBlock: CodeBlock,
+          code: CodeBlock,
         }}
         plugins={[toc]}
       />

@@ -59,6 +59,9 @@ $ npm start
 // 打包
 $ npm run build
 ```
+## 关于高亮
+
+[how to add custom style to codes](https://github.com/rexxars/react-markdown/issues/354)
 
 ## 技术栈
 

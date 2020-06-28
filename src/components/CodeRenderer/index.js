@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Lowlight from 'react-lowlight';
 import shallowCompare from 'react-addons-shallow-compare';
 import js from 'highlight.js/lib/languages/javascript';
-
+import 'highlight.js/styles/github.css';
 Lowlight.registerLanguage('js', js);
 
 class CodeBlock extends Component {
@@ -16,7 +16,7 @@ class CodeBlock extends Component {
     return (
       <Lowlight
         language={this.props.language || 'js'}
-        value={this.props.literal}
+        value={this.props.value}
         inline={this.props.inline}
       />
     );
