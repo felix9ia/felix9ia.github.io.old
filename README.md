@@ -29,6 +29,7 @@
 [themeforest-iceberg](http://preview.themeforest.net/item/iceberg-simple-minimal-personal-contentfocused-wordpress-blog-theme-rtl-support/full_screen_preview/13624572)
 [『花仲马』的博客](https://www.phodal.com/blog/stop-reuse/)
 [catchen.me](https://chinese.catchen.me/)
+[少数派的文章阅读页面](https://sspai.com/post/60787)
 
 ## Fork 使用
 
