@@ -4,7 +4,7 @@
 
 # felix9ia's blog
 
-这是一个基于  ``Github page`` 和 ``github api`` 中的 `issues` 接口 搭建的单页面静态博客，点击[「这里」](http://felix9ia.github.io)查看博客。
+这是一个基于  ``Github page`` 和 ``github api`` 中的 `issues` 接口, 工程依赖 [umijs](https://umijs.org/zh-CN/docs/getting-started) 和 [ant.design](https://ant.design/docs/react/introduce-cn) 搭建的单页面静态博客，点击[「这里」](http://felix9ia.github.io)查看博客。
 
 ## 缘起
 
