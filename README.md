@@ -1,6 +1,4 @@
-# 
 
-可以通过配置 `src/config.js` 进行配置，直接接入自己相关项目仓库中的 `issues` 列表
 
 # felix9ia's blog
 
@@ -22,14 +20,6 @@
 
 ### 路由参考
 所有的路由习惯都是参照了 [阮一峰的个人网站](http://www.ruanyifeng.com/)
-
-### 版式设计参考 
-
-[作为程序员，你的个人主页是什么样子的?](https://www.zhihu.com/question/361282089)
-[themeforest-iceberg](http://preview.themeforest.net/item/iceberg-simple-minimal-personal-contentfocused-wordpress-blog-theme-rtl-support/full_screen_preview/13624572)
-[『花仲马』的博客](https://www.phodal.com/blog/stop-reuse/)
-[catchen.me](https://chinese.catchen.me/)
-[少数派的文章阅读页面](https://sspai.com/post/60787)
 
 ## Fork 使用
 
@@ -77,6 +67,19 @@ $ npm run build
 - Safari
 - IE10+
 
+
+
+
 ## TODO
 [] 文章目录
 [] 文章书写 [editor](https://github.com/rexxars/react-markdown/blob/master/demo/src/demo.js)
+
+
+## 个人喜欢的版式设计
+[稚晖的个人站](http://www.pengzhihui.xyz/)
+[作为程序员，你的个人主页是什么样子的?](https://www.zhihu.com/question/361282089)
+[themeforest-iceberg](http://preview.themeforest.net/item/iceberg-simple-minimal-personal-contentfocused-wordpress-blog-theme-rtl-support/full_screen_preview/13624572)
+[『花仲马』的博客](https://www.phodal.com/blog/stop-reuse/)
+[catchen.me](https://chinese.catchen.me/)
+[伊万夫斯基](https://www.cnblogs.com/benjieqiang/p/11406982.html) 使用的 [cnblogs-theme-silence](https://github.com/esofar/cnblogs-theme-silence)
+[少数派的文章阅读页面](https://sspai.com/post/60787)
