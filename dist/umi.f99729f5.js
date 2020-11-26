@@ -39353,13 +39353,17 @@
             ),
             o.a.createElement(
               r['a'],
-              { type: 'text', href: '#' },
+              { type: 'text', target: '_blank', href: '#' },
               '\u6211\u7684\u7b80\u5386',
             ),
             o.a.createElement(
               r['a'],
-              { type: 'text', href: 'https://space.bilibili.com/130832968' },
-              '\u6211\u7684 BiliBili',
+              {
+                type: 'text',
+                target: '_blank',
+                href: 'https://github.com/felix9ia',
+              },
+              '\u6211\u7684 Github',
             ),
           ),
         );

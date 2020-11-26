@@ -23,11 +23,18 @@ class Index extends Component {
           <Button type="text" onClick={this.handleIssueClick}>
             我的博客
           </Button>
-          <Button type="text" href="#">
+          <Button type="text" target="_blank" href="#">
             我的简历
           </Button>
-          <Button type="text" href="https://space.bilibili.com/130832968">
-            我的 BiliBili
+          {/*<Button type="text" target="_blank" href="https://space.bilibili.com/130832968">*/}
+          {/*  我的 BiliBili*/}
+          {/*</Button>*/}
+          <Button
+            type="text"
+            target="_blank"
+            href="https://github.com/felix9ia"
+          >
+            我的 Github
           </Button>
         </div>
       </div>
