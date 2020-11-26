@@ -45,11 +45,13 @@ $ yarn install
 
 ``` bash
 // 开发
-$ npm start
+npm start
 
 // 打包
-$ npm run build
+npm run build
 ```
+#### 发布
+如果发现没有发布成功, 报 `404` ,就把 `dist` 目录下的 `index.html` 拷贝出来到根目录一份来,然后推送上去后会立即生效
 ## 关于高亮
 
 [how to add custom style to codes](https://github.com/rexxars/react-markdown/issues/354)
