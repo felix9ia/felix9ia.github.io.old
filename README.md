@@ -15,7 +15,7 @@
 参考大家的成熟方案
 
 ### 开发工程参考
-而这个项目最原始是 fork 自 [cobish/cobish.github.io](https://github.com/cobish/cobish.github.io)，但是由于项目框架有些老旧，无法支持 antd
+而这个项目最原始是 fork 自 [cobish/cobish.github.io](https://github.com/cobish/cobish.github.io) ，但是由于项目框架有些老旧，无法支持 antd
 ， 所以我按照原有的思路重新进行了搭建
 
 ### 路由参考
